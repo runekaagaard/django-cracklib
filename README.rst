@@ -68,6 +68,7 @@ Translation
 
 Translations can be downloaded in .po format at
 https://translations.launchpad.net/ubuntu/precise/+source/cracklib2/+pots/cracklib.
+A modified danish translation is included.
 
 Copy the .po file to 
 "django_cracklib/locale/[LANGUAGE_CODE]/LC_MESSAGES/django.po".
