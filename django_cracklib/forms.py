@@ -1,8 +1,9 @@
 from django.forms import forms
 from django.contrib.auth.forms import SetPasswordForm
 from django.utils.translation import ugettext as _
-from django_cracklib.settings import DJANGO_CRACKLIB
+from django_cracklib.settings import DJANGO_CRACKLIB as CRACKLIB
 from django.utils.safestring import mark_safe
+from django.template import loader, Context
 
 class CracklibSetPasswordForm(SetPasswordForm):
     def __init__(self, *args, **kwargs):
@@ -17,10 +18,12 @@ class CracklibSetPasswordForm(SetPasswordForm):
         
         try:
             import crack
-            crack.VeryFascistCheck(password1, dictpath=DJANGO_CRACKLIB['dict_path'])
+            crack.VeryFascistCheck(password1, dictpath=CRACKLIB['dict_path'])
         except ValueError, message:
-            if DJANGO_CRACKLIB['append_error_message']:
-                extra = DJANGO_CRACKLIB['append_error_message']
+            message = _(str(message))
+            if CRACKLIB['error_message_template']:
+                t = loader.get_template(CRACKLIB['error_message_template'])
+                output = t.render(Context({'message': message}))
             else:
-                extra = u''
-            raise forms.ValidationError, mark_safe("%s %s" % (_(str(message)), extra))
+                output = message
+            raise forms.ValidationError, mark_safe(output)

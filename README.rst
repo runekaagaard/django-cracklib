@@ -47,8 +47,9 @@ The following settings is available::
     DJANGO_CRACKLIB = {
 		# The absolute path to the wordlist file or directory.
 		'dict_path': '/var/cache/cracklib/cracklib_dict',
-		# HTML appended after the error message like "Whats the meaning of this?".
-		'append_error_message': None,
+		# Optional template path, to render the error message. The variable
+		# {{message}} is provided for the template.
+		'error_message_template': None,
 	}
 
 Wordlists
