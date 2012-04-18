@@ -1,0 +1,78 @@
+# translation of cracklib.po to Dansk
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Martin Møller <martin@martinm-76.dk>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-02 21:00-0600\n"
+"PO-Revision-Date: 2009-06-29 10:09+0000\n"
+"Last-Translator: Rune Kaagaard <rumi.kg@gmail.com>\n"
+"Language-Team: Dansk <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-04-18 10:08+0000\n"
+"X-Generator: Launchpad (build 15108)\n"
+
+#: lib/fascist.c:550
+msgid "you are not registered in the password file"
+msgstr "Du er ikke optegnet i adgangskodefilen"
+
+#: lib/fascist.c:564
+msgid "it is based on your username"
+msgstr "Kodeordet må ikke være baseret din email."
+
+#: lib/fascist.c:629
+msgid "it is based upon your password entry"
+msgstr "Dit nye kodeord må ikke være baseret på din tidligere adgangskode."
+
+#: lib/fascist.c:649
+msgid "it is derived from your password entry"
+msgstr "Dit nye kodeord må ikke være afledt af din tidligere adgangskode."
+
+#: lib/fascist.c:662
+msgid "it's derived from your password entry"
+msgstr "Dit nye kodeord må ikke være afledt af din tidligere adgangskode."
+
+#: lib/fascist.c:676
+msgid "it is derivable from your password entry"
+msgstr "Dit nye kodeord må ikke kunne afledes af din tidligere adgangskode."
+
+#: lib/fascist.c:690
+msgid "it's derivable from your password entry"
+msgstr "Dit nye kodeord må ikke kunne afledes af din tidligere adgangskode."
+
+#: lib/fascist.c:726
+msgid "it is WAY too short"
+msgstr "Kodeordet er ALT for kort."
+
+#: lib/fascist.c:731
+msgid "it is too short"
+msgstr "Kodeordet er for kort."
+
+#: lib/fascist.c:748
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "Kodeordet indeholder ikke nok FORSKELLIGE tegn."
+
+#: lib/fascist.c:762
+msgid "it is all whitespace"
+msgstr "Kodeordet må ikke kun indeholde mellemrum og blanke tegn."
+
+#: lib/fascist.c:781
+msgid "it is too simplistic/systematic"
+msgstr "Kodeordet er for simpelt eller for systematisk."
+
+#: lib/fascist.c:786
+msgid "it looks like a National Insurance number."
+msgstr "Kodeordet må ikke ligne et CPR nummer."
+
+#: lib/fascist.c:813
+msgid "it is based on a dictionary word"
+msgstr "Kodeordet må ikke være baseret på et ord fra en ordbog."
+
+#: lib/fascist.c:832
+msgid "it is based on a (reversed) dictionary word"
+msgstr "Kodeordet må ikke være baseret på et spejlvendt ord fra en ordbog."
