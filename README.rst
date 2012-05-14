@@ -52,10 +52,10 @@ The following settings is available::
 		'error_message_template': None,
 	}
 
-Wordlists
-=========
+Installing the cracklib library
+===============================
 
-Install additional wordlists with banned words by following the guide at
+Install craclib and wordlists with banned words by following the guide at
 http://www.2sheds.ru/blog/2007/03/generate-cracklib-word-library-on-ubuntu-linux/.
 
 Two examples of additional wordlists:
@@ -76,3 +76,16 @@ Copy the .po file to
 To recompile the messages cd to "django_cracklib" and run::
 
 	django-admin.py compilemessages
+	
+Known bugs
+==========
+
+If you get a segfault like in
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=596281, a fast solution is
+to set the "dict_path" setting to None, so it won't be passed to cracklib which
+is what causes the bug. You need to be sure that the dictionary files is
+available at the default location that cracklib expects on your system. On
+ubuntu 10.10 it just worked when following the guide, but I don't know how to 
+get the default location on other systems. Another solution is to update to the 
+latest version, but on ubuntu that requires Python 2.7 too. You can run the
+"test_cracklib.py" script to see if this bug affects you. 

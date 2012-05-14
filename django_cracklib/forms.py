@@ -18,7 +18,11 @@ class CracklibSetPasswordForm(SetPasswordForm):
         
         try:
             import crack
-            crack.VeryFascistCheck(password1, dictpath=CRACKLIB['dict_path'])
+            dictpath = CRACKLIB['dict_path']
+            if dictpath is not None:
+                crack.VeryFascistCheck(password1)
+            else:
+                crack.VeryFascistCheck(password1, dictpath=dictpath)
             return self.cleaned_data
         except ValueError, message:
             message = _(str(message))
