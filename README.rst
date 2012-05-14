@@ -55,7 +55,7 @@ The following settings is available::
 Installing the cracklib library
 ===============================
 
-Install craclib and wordlists with banned words by following the guide at
+Install cracklib and wordlists with banned words by following the guide at
 http://www.2sheds.ru/blog/2007/03/generate-cracklib-word-library-on-ubuntu-linux/.
 
 Two examples of additional wordlists:
