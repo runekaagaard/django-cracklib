@@ -39,7 +39,7 @@ similar to::
 	urlpatterns = patterns('',
 		# Other patterns here.
 		
-		(r'^account/password/reset/confirm/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)$', 
+		(r'^account/password/reset/confirm/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 
      	 password_reset_confirm, {'set_password_form': CracklibSetPasswordForm}),
     ) 
 The following settings is available::
